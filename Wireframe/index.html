@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WireFrame</title>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <aside class="right">Aside 1</aside>
+        <main>Main</main>
+        <section>Section</section>
+        <aside class="left">aside 2</aside>
+        <footer>Footer</footer>
+    </div>
+
+    <!-- styling -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: larger;
+            font-weight: 700;
+            text-align: center;
+            display: grid;
+            grid-template: 50px 1fr 1fr 50% / 1fr 2fr 1fr;
+            gap: 10px;
+        }
+
+        header,nav,main,
+        section,aside,footer{
+            border: 2px solid;
+            
+        }
+        
+        header,section,footer,nav{
+            
+            grid-column: 1/span 3;
+        }
+
+        main,.right, .left{
+            
+            grid-row: 3/span 4;
+        }
+    </style>
+</body>
+</html>
